@@ -18,10 +18,10 @@ public class AccessibilityTest extends BaseTest {
 	public  void Accessibility(String url) throws IOException, InterruptedException {
 		 landingPage=openLink();
 		landingPage.openURL(url);
-		landingPage.getAllMissingAltAttributes(".\\Reports\\ResultFiles\\getAllMissingAltAttributes.txt");
-		landingPage.inputWithoutPlaceholder(".\\Reports\\ResultFiles\\inputWithoutPlaceholder.txt");
-		landingPage.getFramesWithoutTitle(".\\Reports\\ResultFiles\\getFramesWithoutTitle.txt");
-		landingPage.getAllButtonsWithoutDescriptiveValue(".\\Reports\\ResultFiles\\getAllButtonsWithoutDescriptiveValue.txt");
+		landingPage.getAllMissingAltAttributes(".\\Reports\\getAllMissingAltAttributes.txt");
+		landingPage.inputWithoutPlaceholder(".\\Reports\\inputWithoutPlaceholder.txt");
+		landingPage.getFramesWithoutTitle(".\\Reports\\getFramesWithoutTitle.txt");
+		landingPage.getAllButtonsWithoutDescriptiveValue(".\\Reports\\getAllButtonsWithoutDescriptiveValue.txt");
 		
 		landingPage.checkKeyboardFunctionality();
 		
