@@ -15,13 +15,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AccessibilityTest extends BaseTest {
 	LandingPage landingPage;
 	@Test(dataProvider = "getData")
-	public  void Accessibility(String url) throws IOException, InterruptedException {
+	public  void Accessibility(String url,String linkName) throws IOException, InterruptedException {
 		 landingPage=openLink();
 		landingPage.openURL(url);
-		landingPage.getAllMissingAltAttributes(".\\Reports\\getAllMissingAltAttributes.txt");
-		landingPage.inputWithoutPlaceholder(".\\Reports\\inputWithoutPlaceholder.txt");
-		landingPage.getFramesWithoutTitle(".\\Reports\\getFramesWithoutTitle.txt");
-		landingPage.getAllButtonsWithoutDescriptiveValue(".\\Reports\\getAllButtonsWithoutDescriptiveValue.txt");
+		landingPage.getAllMissingAltAttributes(".\\Reports\\"+linkName+"getAllMissingAltAttributes.txt");
+		landingPage.inputWithoutPlaceholder(".\\Reports\\"+linkName+"inputWithoutPlaceholder.txt");
+		landingPage.getFramesWithoutTitle(".\\Reports\\"+linkName+"getFramesWithoutTitle.txt");
+		landingPage.getAllButtonsWithoutDescriptiveValue(".\\Reports\\"+linkName+"getAllButtonsWithoutDescriptiveValue.txt");
 		
 		landingPage.checkKeyboardFunctionality();
 		
@@ -36,7 +36,7 @@ public class AccessibilityTest extends BaseTest {
 	@DataProvider
 	private Object[][] getData() {
 		
-		return new Object[][] {{"https://www.heart.org/"},{"https://www.heart.org/en/about-us/heart-attack-and-stroke-symptoms"}};
+		return new Object[][] {{"https://www.heart.org/","HomePage"},{"https://www.heart.org/en/about-us/heart-attack-and-stroke-symptoms","heart-attack-and-stroke-symptoms"}};
 
 	}
 
