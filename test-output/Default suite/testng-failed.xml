@@ -5,7 +5,8 @@
     <classes>
       <class name="RWS.tests.AccessibilityTest">
         <methods>
-          <include name="Accessibility"/>
+          <include name="Perceivable" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- RWS.tests.AccessibilityTest -->
     </classes>

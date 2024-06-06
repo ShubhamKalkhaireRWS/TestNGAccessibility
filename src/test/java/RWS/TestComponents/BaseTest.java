@@ -39,6 +39,7 @@ public class BaseTest {
 
 		if (browserName.contains("chrome")) {
 			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-notifications");
 			WebDriverManager.chromedriver().setup();
 			if (browserName.contains("headless")) {
 				options.addArguments("headless");
